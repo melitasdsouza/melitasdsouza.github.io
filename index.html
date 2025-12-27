@@ -1,155 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>Melita D’Souza</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Source+Serif+4&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;500&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADLINE -->
-  <header class="masthead">
+  <!-- HERO -->
+  <section class="hero">
     <h1>Melita D’Souza</h1>
-    <p class="deck">Creative Coding · Computer Graphics · Research</p>
-  </header>
-
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#cv">CV</a></li>
-      <li><a href="#awards">Awards</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </nav>
-
-  <!-- HOME -->
-  <section id="home" class="section hero">
-    <p class="lede">
-      Exploring generative systems, editorial design, and computation
-      through creative coding and visual research.
+    <p class="hero-sub">
+      Creative Coding · Visual Systems · Editorial Computation
     </p>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
+  <!-- LEDE -->
+  <section class="lede">
+    <p>
+      I build visual systems where computation behaves like material —
+      fluid, imperfect, and responsive to human gesture.
+    </p>
+  </section>
 
-    <div class="project-grid">
+  <!-- FEATURE PROJECT -->
+  <section class="feature">
+    <div class="feature-text">
+      <h2>Lava Lamp Simulation</h2>
+      <p>
+        A study in constrained organic motion, inspired by
+        physical systems and editorial abstraction.
+      </p>
+      <a href="https://melitasdsouza.github.io/cs44n-lava-lamp/">View Project →</a>
+    </div>
 
-      <article class="project">
-        <h3>Lava Lamp Simulation</h3>
-        <img src="https://raw.githubusercontent.com/melitasdsouza/cs44n-lava-lamp/main/preview.gif" alt="Lava Lamp Preview">
-        <p>Noise-driven organic motion constrained within a glass form.</p>
-        <a href="https://melitasdsouza.github.io/cs44n-lava-lamp/">View Project →</a>
-      </article>
+    <img
+      src="https://raw.githubusercontent.com/melitasdsouza/cs44n-lava-lamp/main/preview.gif"
+      alt="Lava Lamp"
+    >
+  </section>
 
-      <article class="project">
-        <h3>Fireworks Simulation</h3>
-        <img src="https://raw.githubusercontent.com/melitasdsouza/cs44n-fireworks/main/preview.gif" alt="Fireworks Preview">
-        <p>Particle systems with gravity and pseudo-3D depth projection.</p>
-        <a href="https://melitasdsouza.github.io/cs44n-fireworks/">View Project →</a>
-      </article>
+  <!-- PULL QUOTE -->
+  <section class="pull">
+    <p>
+      “Code is not the medium.  
+      Behavior is.”
+    </p>
+  </section>
 
-      <article class="project">
-        <h3>Rotating Smiley Grid</h3>
-        <img src="https://raw.githubusercontent.com/melitasdsouza/cs44n-rotating-smileys/main/preview.gif" alt="Smiley Preview">
-        <p>Generative patterns exploring symmetry, rotation, and color.</p>
-        <a href="https://melitasdsouza.github.io/cs44n-rotating-smileys/">View Project →</a>
-      </article>
-
+  <!-- PROJECT STRIP -->
+  <section class="strip">
+    <div>
+      <h3>Fireworks</h3>
+      <a href="https://melitasdsouza.github.io/cs44n-fireworks/">View →</a>
+    </div>
+    <div>
+      <h3>Smiley Grid</h3>
+      <a href="https://melitasdsouza.github.io/cs44n-rotating-smileys/">View →</a>
     </div>
   </section>
 
   <!-- RESEARCH -->
-  <section id="research" class="section">
+  <section class="research">
     <h2>Research</h2>
     <p>
-      Interests include generative systems, perception, simulation,
-      astrophysical data analysis, and the intersection of computation
-      and visual form.
+      Interests include generative systems, astrophysical data,
+      perception, and emergent structure.
     </p>
   </section>
 
-  <!-- CV -->
-  <section id="cv" class="section cv">
-    <h2>Curriculum Vitae</h2>
+  <!-- CV BUTTON -->
+  <section class="cta">
+    <button id="openCV">Curriculum Vitae</button>
+  </section>
 
-    <p class="cv-download">
+  <!-- CV MODAL -->
+  <div class="modal" id="cvModal">
+    <div class="modal-content">
+      <span id="closeCV">×</span>
+      <h2>Curriculum Vitae</h2>
+      <p>
+        Stanford University · Computer Science (AI)<br>
+        Astrophysics Research · Creative Coding
+      </p>
       <a href="assets/Melita_DSouza_CV.pdf" target="_blank">
-        Download full CV (PDF) →
+        Download full CV →
       </a>
-    </p>
-
-    <div class="cv-block">
-      <h3>Education</h3>
-      <p>
-        <strong>Stanford University</strong>, Palo Alto, CA<br>
-        B.S. Management Science & Engineering + Computer Science (AI)<br>
-        Minor in Communications · Class of 2028
-      </p>
     </div>
-
-    <div class="cv-block">
-      <h3>Research & Technical Experience</h3>
-      <p>
-        <strong>Yale University</strong> — Astrophysics Research Intern<br>
-        Analyzed extragalactic supernova photometric data using Python.
-      </p>
-      <p>
-        <strong>Penn State University</strong> — Research Assistant<br>
-        Built Python models for large-scale observational datasets.
-      </p>
-    </div>
-
-    <div class="cv-block">
-      <h3>Writing & Media</h3>
-      <p>
-        <strong>The Stanford Daily</strong> — Science & Technology Writer
-      </p>
-      <p>
-        <strong>D’Souza Twins</strong> — Content Creator (20K+ monthly audience)
-      </p>
-    </div>
-
-    <div class="cv-block">
-      <h3>Skills</h3>
-      <p>
-        Python, C++, Java, SQL · GLSL, Ray Marching · Data Visualization ·
-        Technical Writing · Video Editing
-      </p>
-    </div>
-  </section>
-
-  <!-- AWARDS -->
-  <section id="awards" class="section">
-    <h2>Awards</h2>
-    <ul>
-      <li>CS 44N – Creative Coding, Stanford University</li>
-      <li>Valedictorian, Community School of Naples</li>
-    </ul>
-  </section>
+  </div>
 
   <!-- ABOUT -->
-  <section id="about" class="section about">
-    <h2>About</h2>
+  <section class="about">
     <p>
-      I work at the intersection of creative coding, computation,
-      and editorial visual systems. My work explores motion,
-      emergence, and perception through code.
+      I’m interested in work that lives between disciplines —
+      where computation, design, and narrative intersect.
     </p>
   </section>
 
-  <!-- CURSOR EFFECT -->
+  <!-- SCRIPTS -->
   <script src="cursor.js"></script>
+  <script src="site.js"></script>
 
 </body>
 </html>
+
