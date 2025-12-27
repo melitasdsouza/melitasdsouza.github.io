@@ -1,94 +1,155 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background: #ffffff;
-  color: #111;
+  background: #0e0e0e;
+  color: #f5f5f5;
+}
+
+/* TOP BAR */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 24px;
+  z-index: 100;
+}
+
+.brand {
+  color: red;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.topbar ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* SECTIONS */
+.section {
+  padding: 120px 24px 100px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.dark {
+  background: #000;
 }
 
 /* HERO */
 .hero {
-  padding: 80px 20px 60px;
-  max-width: 700px;
-  margin: auto;
+  padding-top: 160px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 10px;
+.frame {
+  border: 2px solid #fff;
+  padding: 40px;
+  position: relative;
 }
 
-.tagline {
+.frame h1 {
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.lower-third {
+  position: absolute;
+  bottom: -18px;
+  left: 20px;
+  background: red;
+  padding: 6px 12px;
+  font-size: 0.75rem;
   font-weight: 600;
-  text-transform: lowercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 30px;
 }
 
-.bio {
-  font-size: 1.1rem;
+/* TEXT */
+.lede {
+  max-width: 600px;
+  margin-top: 40px;
   line-height: 1.6;
 }
 
-/* LINKS */
-.links {
+h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* CARDS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #444;
+  padding: 20px;
+}
+
+/* CTA */
+.cta {
+  display: inline-block;
+  margin-top: 30px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid red;
+  font-weight: 600;
+}
+
+/* TIMELINE */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.event {
   display: flex;
   gap: 20px;
-  padding: 0 20px 40px;
-  max-width: 700px;
-  margin: auto;
+  align-items: flex-start;
 }
 
-.links a {
-  text-decoration: none;
-  font-weight: 600;
-  border-bottom: 2px solid #111;
-  color: #111;
+.dot {
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  margin-top: 6px;
 }
 
-/* BLOCKS */
-.block {
-  padding: 40px 20px;
-  max-width: 700px;
-  margin: auto;
+/* ABOUT */
+.about {
+  max-width: 600px;
+  line-height: 1.6;
 }
 
-.block h2 {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-}
-
-/* PILLS */
-.pill-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-}
-
-.pill-list li {
-  border: 1px solid #111;
-  padding: 6px 12px;
-  font-size: 0.85rem;
-}
-
-/* FACTS */
-.facts {
-  list-style: none;
-  padding: 0;
-  line-height: 1.8;
+.about.small {
+  opacity: 0.7;
+  margin-top: 20px;
 }
 
 /* FOOTER */
 footer {
-  padding: 40px 20px;
+  padding: 40px;
   text-align: center;
-  font-size: 0.8rem;
-  color: #555;
+  opacity: 0.6;
 }
+
 
