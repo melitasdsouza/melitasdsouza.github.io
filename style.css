@@ -143,3 +143,27 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* --- SCROLL REVEALS (EDITORIAL SAFE) --- */
+
+/* Nothing animates before JS loads */
+.preload .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hidden state ONLY after JS enables it */
+body:not(.preload) .reveal {
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+/* Revealed state */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 1s ease,
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
