@@ -18,24 +18,38 @@ window.addEventListener("resize", resize);
 let lastX = null;
 let lastY = null;
 
-document.addEventListener("mousemove", (e) => {
-  // CLEAR EVERYTHING — no trail possible
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+// --- Gentle fade loop (VERY subtle persistence) ---
+function fade() {
+  ctx.fillStyle = "rgba(247, 245, 240, 0.25)"; // paper color, fast fade
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  requestAnimationFrame(fade);
+}
+fade();
 
+// --- Graphite stroke ---
+document.addEventListener("mousemove", (e) => {
   if (lastX === null) {
     lastX = e.clientX;
     lastY = e.clientY;
     return;
   }
 
-  ctx.strokeStyle = "rgba(40, 40, 40, 0.6)"; // graphite gray
-  ctx.lineWidth = 0.8;                      // thin pencil
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
+  ctx.lineWidth = 1.6; // thicker graphite
+  ctx.strokeStyle = "rgba(30, 30, 30, 0.45)"; // soft graphite gray
 
   ctx.beginPath();
   ctx.moveTo(lastX, lastY);
-  ctx.lineTo(e.clientX, e.clientY);
+
+  // Draw multiple noisy sub-strokes to simulate graphite grain
+  for (let i = 0; i < 3; i++) {
+    const nx = (Math.random() - 0.5) * 0.8;
+    const ny = (Math.random() - 0.5) * 0.8;
+
+    ctx.lineTo(e.clientX + nx, e.clientY + ny);
+  }
+
   ctx.stroke();
 
   lastX = e.clientX;
@@ -43,7 +57,6 @@ document.addEventListener("mousemove", (e) => {
 });
 
 document.addEventListener("mouseleave", () => {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
   lastX = null;
   lastY = null;
 });
