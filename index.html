@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,117 +14,128 @@
 <body>
 
   <!-- TOP BAR -->
-  <nav class="topbar">
-    <div class="brand">● LIVE</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </nav>
-
-  <!-- HOME -->
-  <section id="home" class="section hero">
-    <div class="frame">
-      <h1>Melita D’Souza</h1>
-      <div class="lower-third">
-        reporting live · stanford · media × tech × impact
-      </div>
+  <header class="topbar">
+    <div class="live-indicator">
+      <span class="dot"></span> LIVE
     </div>
 
-    <p class="lede">
-      I’m a Stanford student focused on founding and leading
-      media-driven technology ventures that combine AI,
-      storytelling, and business strategy to create social change.
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="#media">Media</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-card">
+      <h1>Melita D’Souza</h1>
+      <div class="lower-third">reporting live · stanford · media × tech × impact</div>
+    </div>
+
+    <p class="hero-bio">
+      I’m a Stanford student focused on founding and leading media-driven
+      technology ventures that combine AI, storytelling, and business
+      strategy to create social change.
     </p>
   </section>
 
   <!-- RESUME -->
   <section id="resume" class="section">
-    <h2>Resume</h2>
+    <h2>Resume Snapshot</h2>
 
     <div class="card-grid">
       <div class="card">
-        <h3>Education</h3>
-        <p>Stanford University<br>
-        CS + MS&E · AI focus</p>
+        <span class="label">Education</span>
+        <p>Stanford University<br>CS + MS&E (AI focus)</p>
       </div>
 
       <div class="card">
-        <h3>Media</h3>
-        <p>
-          Science & Tech Writer<br>
-          <strong>The Stanford Daily</strong>
-        </p>
+        <span class="label">Writing</span>
+        <p>Science & Technology Writer<br><strong>The Stanford Daily</strong></p>
       </div>
 
       <div class="card">
-        <h3>Reach</h3>
-        <p>
-          500K+ views on viral video<br>
-          YouTube · Instagram · TikTok
-        </p>
+        <span class="label">Reach</span>
+        <p>500K+ views on viral video<br>YouTube · Instagram · TikTok</p>
       </div>
 
       <div class="card">
-        <h3>Theatre</h3>
-        <p>
-          Producer — <em>Grease!</em><br>
-          Ram’s Head Theatrical Society
-        </p>
+        <span class="label">Theatre</span>
+        <p>Producer — <em>Grease!</em><br>Ram’s Head Theatrical Society</p>
       </div>
     </div>
 
-    <a class="cta" href="assets/Melita_DSouza_CV.pdf" target="_blank">
-      Download Full Resume →
-    </a>
+    <a class="cta" href="#" target="_blank">Download Full Resume →</a>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section dark">
+  <section id="projects" class="section alt">
     <h2>Projects</h2>
 
-    <div class="timeline">
-      <div class="event">
-        <span class="dot"></span>
-        <div>
-          <h3>Fireworks Simulation</h3>
-          <p>Particle systems, gravity, pseudo-3D depth.</p>
-        </div>
+    <div class="card-grid">
+      <div class="card hover">
+        <span class="label">Simulation</span>
+        <h3>Fireworks</h3>
+        <p>Particle systems with gravity and pseudo-3D depth.</p>
       </div>
 
-      <div class="event">
-        <span class="dot"></span>
-        <div>
-          <h3>Lava Lamp Simulation</h3>
-          <p>Noise-driven organic motion inside constraints.</p>
-        </div>
+      <div class="card hover">
+        <span class="label">Generative</span>
+        <h3>Lava Lamp</h3>
+        <p>Noise-driven organic motion inside constraints.</p>
       </div>
 
-      <div class="event">
-        <span class="dot"></span>
-        <div>
-          <h3>Rotating Smiley Grid</h3>
-          <p>Generative systems exploring symmetry & color.</p>
-        </div>
+      <div class="card hover">
+        <span class="label">Patterns</span>
+        <h3>Smiley Grid</h3>
+        <p>Rotation, symmetry, and color systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section id="media" class="section">
+    <h2>Media & Internet Presence</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <span class="label">Journalism</span>
+        <p>Science & Technology writer for <em>The Stanford Daily</em></p>
+      </div>
+
+      <div class="card">
+        <span class="label">Video</span>
+        <p>Content creator on YouTube, Instagram, and TikTok</p>
+      </div>
+
+      <div class="card">
+        <span class="label">Viral</span>
+        <p>College decisions reaction — <strong>500K+ views</strong></p>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
+  <section id="about" class="section alt">
     <h2>About</h2>
 
-    <p class="about">
-      I work at the intersection of media, computation, and leadership.
-      I’m interested in how technology shapes culture — and how people
-      can use it intentionally for social good.
-    </p>
+    <div class="about-grid">
+      <div class="card wide">
+        <p>
+          I’m interested in how technology, media, and storytelling shape
+          public life. My work spans creative coding, journalism, theatre,
+          and social platforms — anything that ends up online.
+        </p>
+      </div>
 
-    <p class="about small">
-      Yes, I do a lot of things that end up online.
-    </p>
+      <div class="card">
+        <span class="label">Note</span>
+        <p>Yes, I do a lot of things that end up online.</p>
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -134,4 +145,3 @@
 
 </body>
 </html>
-
