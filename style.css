@@ -25,7 +25,7 @@ body {
 }
 
 .hero-sub {
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   font-size: 0.8rem;
   margin-top: 20px;
@@ -43,7 +43,7 @@ body {
 .feature {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 70px;
   align-items: center;
   padding: 120px 10vw;
 }
@@ -96,6 +96,7 @@ body {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
+  z-index: 1000;
 }
 
 .modal-content {
@@ -111,6 +112,7 @@ body {
   top: 10px;
   right: 15px;
   cursor: pointer;
+  font-size: 1.4rem;
 }
 
 /* ABOUT */
@@ -126,4 +128,18 @@ a {
   text-decoration: none;
   color: #111;
   border-bottom: 1px solid #111;
+}
+
+/* SCROLL REVEALS */
+.reveal {
+  opacity: 0;
+  transform: translateY(70px);
+  transition:
+    opacity 0.9s ease,
+    transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
