@@ -15,27 +15,21 @@ function resize() {
 resize();
 window.addEventListener("resize", resize);
 
-// Pencil state
 let lastX = null;
 let lastY = null;
 
-// Fade the canvas slightly every frame (this creates the trail + disappearance)
-function fade() {
-  ctx.fillStyle = "rgba(247, 245, 240, 0.08)"; // matches paper bg
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  requestAnimationFrame(fade);
-}
-fade();
-
 document.addEventListener("mousemove", e => {
+  // Clear almost immediately (this is the key change)
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
   if (lastX === null) {
     lastX = e.clientX;
     lastY = e.clientY;
     return;
   }
 
-  // Graphite-style stroke
-  ctx.strokeStyle = "rgba(20, 20, 20, 0.35)";
+  // Pencil / graphite style
+  ctx.strokeStyle = "rgba(25, 25, 25, 0.45)";
   ctx.lineWidth = 1.2;
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
@@ -43,9 +37,9 @@ document.addEventListener("mousemove", e => {
   ctx.beginPath();
   ctx.moveTo(lastX, lastY);
 
-  // Slight jitter for hand-drawn feel
-  const jitterX = (Math.random() - 0.5) * 0.6;
-  const jitterY = (Math.random() - 0.5) * 0.6;
+  // Subtle hand jitter
+  const jitterX = (Math.random() - 0.5) * 0.4;
+  const jitterY = (Math.random() - 0.5) * 0.4;
 
   ctx.lineTo(e.clientX + jitterX, e.clientY + jitterY);
   ctx.stroke();
@@ -55,6 +49,7 @@ document.addEventListener("mousemove", e => {
 });
 
 document.addEventListener("mouseleave", () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   lastX = null;
   lastY = null;
 });
