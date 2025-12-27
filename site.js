@@ -1,24 +1,30 @@
-// --- SCROLL REVEALS ---
-const reveals = document.querySelectorAll(".reveal");
+// ENABLE ANIMATIONS ONLY AFTER LOAD
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.remove("preload");
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
+  const reveals = document.querySelectorAll(".reveal");
 
-reveals.forEach(el => observer.observe(el));
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-// --- CV MODAL ---
+  reveals.forEach(el => observer.observe(el));
+});
+
+// CV MODAL
 const open = document.getElementById("openCV");
 const close = document.getElementById("closeCV");
 const modal = document.getElementById("cvModal");
 
-open.onclick = () => modal.style.display = "block";
-close.onclick = () => modal.style.display = "none";
+if (open && close && modal) {
+  open.onclick = () => modal.style.display = "block";
+  close.onclick = () => modal.style.display = "none";
+}
