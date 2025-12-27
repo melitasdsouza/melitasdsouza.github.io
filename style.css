@@ -1,58 +1,69 @@
+/* GLOBAL */
 body {
   margin: 0;
-  background: #f7f5f0;
+  background:
+    radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    #f6f4ef;
+  background-size: 4px 4px;
   color: #111;
   font-family: "Source Serif 4", serif;
 }
 
-/* NAV */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  border-bottom: 1px solid #111;
-  font-family: "Inter", sans-serif;
+/* HEADLINE */
+.masthead {
+  text-align: center;
+  padding: 60px 20px 20px;
+  border-bottom: 2px solid #111;
 }
 
-.logo {
-  font-weight: 600;
-  letter-spacing: 0.05em;
+.masthead h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4.5rem;
+  margin: 0;
+}
+
+.deck {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* NAV BAR */
+.nav {
+  border-bottom: 1px solid #111;
+  padding: 12px 0;
 }
 
 .nav ul {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  gap: 30px;
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .nav a {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   text-decoration: none;
   color: #111;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 100px 20px 80px;
+  padding: 60px 20px;
 }
 
-.hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 4rem;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-family: "Inter", sans-serif;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-size: 0.8rem;
+.lede {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
 }
 
 /* SECTIONS */
