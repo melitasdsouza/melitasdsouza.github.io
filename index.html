@@ -1,147 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Melita D’Souza — Reporting Live</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melita D'Souza | Electrical Engineer & ML Researcher</title>
+    <meta name="description" content="Stanford EE student specializing in AI/ML and hardware-software systems. Researching semiconductor manufacturing at Stanford Nanoelectronics Lab.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-  <!-- TOP BAR -->
-  <header class="topbar">
-    <div class="live-indicator">
-      <span class="dot"></span> LIVE
-    </div>
-
+    <!-- Navigation -->
     <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#resume">Resume</a>
-      <a href="#projects">Projects</a>
-      <a href="#media">Media</a>
-      <a href="#about">About</a>
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="nav-logo">MD</a>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="nav-mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-card">
-      <h1>Melita D’Souza</h1>
-      <div class="lower-third">reporting live · stanford · media × tech × impact</div>
-    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Melita D'Souza</span>
+                    </h1>
+                    <p class="hero-subtitle">Electrical Engineer | ML Researcher | Builder</p>
+                    <p class="hero-description">
+                        Building intelligent systems at the intersection of hardware, software, and AI. 
+                        Currently researching semiconductor manufacturing at Stanford's Nanoelectronics Lab.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">3.78</div>
+                            <div class="stat-label">GPA</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">$70K</div>
+                            <div class="stat-label">Budget Managed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">80+</div>
+                            <div class="stat-label">Team Members Led</div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="resume.pdf" class="btn btn-secondary" target="_blank">View Resume</a>
+                    </div>
+                    <div class="hero-links">
+                        <a href="https://www.linkedin.com/in/melita-d-souza-84b85a259/" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/melitasdsouza" target="_blank" class="social-link" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:melitasdsouza@gmail.com" class="social-link" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="profile.jpg" alt="Melita D'Souza" class="profile-img">
+                        <div class="image-backdrop"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <p class="hero-bio">
-      I’m a Stanford student focused on founding and leading media-driven
-      technology ventures that combine AI, storytelling, and business
-      strategy to create social change.
-    </p>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm an Electrical Engineering student at Stanford University specializing in AI/ML and hardware-software systems. 
+                        Currently researching stochastic defect formation in semiconductor manufacturing at Stanford's Nanoelectronics Lab under Dr. Phillip Wong.
+                    </p>
+                    <p>
+                        I bridge technical depth with cross-functional leadership—whether managing a $70K theater production with 80+ team members, 
+                        developing computational models for nanoscale fabrication, or leading a team of 12 writers at The Stanford Daily.
+                    </p>
+                    <p>
+                        My work spans from building AI-powered iOS applications to analyzing astronomical datasets, 
+                        always focused on solving complex problems at the intersection of engineering and innovation.
+                    </p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🎓</div>
+                        <h3>Education</h3>
+                        <p>Stanford University</p>
+                        <p class="highlight-detail">B.S. Electrical Engineering & CS</p>
+                        <p class="highlight-detail">Minor in Mathematics | GPA: 3.78</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🔬</div>
+                        <h3>Research</h3>
+                        <p>Nanoelectronics Lab</p>
+                        <p class="highlight-detail">Semiconductor manufacturing & AI/ML</p>
+                        <p class="highlight-detail">SPIE Conference 2027</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🏆</div>
+                        <h3>Recognition</h3>
+                        <p>RoseHack 2026 1st Place</p>
+                        <p class="highlight-detail">RTX Invention Convention Finalist</p>
+                        <p class="highlight-detail">Michelle Rosaldo Prize</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- RESUME -->
-  <section id="resume" class="section">
-    <h2>Resume Snapshot</h2>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Semiconductor Defect Prediction</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Developing computational models linking process variability to manufacturing defects in nanoscale fabrication. 
+                        Applied statistical analysis to quantify uncertainty and improve yield prediction accuracy.
+                    </p>
+                    <div class="project-footer">
+                        <span class="project-status">🔬 Ongoing Research</span>
+                    </div>
+                </div>
 
-    <div class="card-grid">
-      <div class="card">
-        <span class="label">Education</span>
-        <p>Stanford University<br>CS + MS&E (AI focus)</p>
-      </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Dolly: AI Finance & Investment App</h3>
+                        <div class="project-tags">
+                            <span class="tag">Swift</span>
+                            <span class="tag">iOS</span>
+                            <span class="tag">AI/ML</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Built AI-powered iOS application optimizing recurring beauty expenses. Implemented recommendation engine 
+                        analyzing financial behavior and AI chatbot for real-time financial education. Won 1st place at RoseHack 2026.
+                    </p>
+                    <div class="project-footer">
+                        <span class="project-status">🏆 Award Winner</span>
+                    </div>
+                </div>
 
-      <div class="card">
-        <span class="label">Writing</span>
-        <p>Science & Technology Writer<br><strong>The Stanford Daily</strong></p>
-      </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Astrophysics Data Pipeline</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Built end-to-end Python pipelines for photometric light-curve analysis on large astronomical datasets. 
+                        Applied statistical techniques for data cleaning, normalization, and signal extraction from Gaia and Swift observations.
+                    </p>
+                    <div class="project-footer">
+                        <span class="project-status">📊 Published Research</span>
+                    </div>
+                </div>
 
-      <div class="card">
-        <span class="label">Reach</span>
-        <p>500K+ views on viral video<br>YouTube · Instagram · TikTok</p>
-      </div>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Stentsor: Smart Medical Device</h3>
+                        <div class="project-tags">
+                            <span class="tag">CAD</span>
+                            <span class="tag">Prototyping</span>
+                            <span class="tag">Hardware</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Designed 3D-printed coronary artery stent for early restenosis detection. 
+                        Demonstrated full product development cycle from problem identification through prototyping. 
+                        RTX Nationals Finalist.
+                    </p>
+                    <div class="project-footer">
+                        <span class="project-status">🔧 Hardware Innovation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="card">
-        <span class="label">Theatre</span>
-        <p>Producer — <em>Grease!</em><br>Ram’s Head Theatrical Society</p>
-      </div>
-    </div>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Stanford Nanoelectronics Lab</h3>
+                            <span class="timeline-date">March 2026 – Present</span>
+                        </div>
+                        <p class="timeline-role">Electrical Engineering REU</p>
+                        <ul class="timeline-details">
+                            <li>Investigating stochastic defect formation in semiconductor manufacturing to improve yield prediction accuracy</li>
+                            <li>Developing computational models linking process variability to manufacturing defects</li>
+                            <li>Planning to present findings at SPIE Advanced Lithography Exhibition in February 2027</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <a class="cta" href="#" target="_blank">Download Full Resume →</a>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section alt">
-    <h2>Projects</h2>
-
-    <div class="card-grid">
-      <div class="card hover">
-        <span class="label">Simulation</span>
-        <h3>Fireworks</h3>
-        <p>Particle systems with gravity and pseudo-3D depth.</p>
-      </div>
-
-      <div class="card hover">
-        <span class="label">Generative</span>
-        <h3>Lava Lamp</h3>
-        <p>Noise-driven organic motion inside constraints.</p>
-      </div>
-
-      <div class="card hover">
-        <span class="label">Patterns</span>
-        <h3>Smiley Grid</h3>
-        <p>Rotation, symmetry, and color systems.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- MEDIA -->
-  <section id="media" class="section">
-    <h2>Media & Internet Presence</h2>
-
-    <div class="card-grid">
-      <div class="card">
-        <span class="label">Journalism</span>
-        <p>Science & Technology writer for <em>The Stanford Daily</em></p>
-      </div>
-
-      <div class="card">
-        <span class="label">Video</span>
-        <p>Content creator on YouTube, Instagram, and TikTok</p>
-      </div>
-
-      <div class="card">
-        <span class="label">Viral</span>
-        <p>College decisions reaction — <strong>500K+ views</strong></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section alt">
-    <h2>About</h2>
-
-    <div class="about-grid">
-      <div class="card wide">
-        <p>
-          I’m interested in how technology, media, and storytelling shape
-          public life. My work spans creative coding, journalism, theatre,
-          and social platforms — anything that ends up online.
-        </p>
-      </div>
-
-      <div class="card">
-        <span class="label">Note</span>
-        <p>Yes, I do a lot of things that end up online.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © Melita D’Souza
-  </footer>
-
-</body>
-</html>
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>The Stanford Daily</h3>
+                            <span class="timeline-date">August 2025 – Present</span>
+                        </div>
+                        <p class="timeline-role">Arts & Life Desk Editor</p>
+                        <ul class="timeline-details">
+                            <li>Lead team of 12 writers producing ~50 articles per quarter, reaching 100K+ readers</li>
+                            <li>Interview and synthesize qualitative insights from campus leaders into feature stories</li>
+                            <li>Authored front-page features identifying emerging trends
